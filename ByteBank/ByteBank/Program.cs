@@ -19,6 +19,20 @@ namespace ByteBank
             Console.WriteLine(funcionario.Nome);
             Console.WriteLine(funcionario.GetBonificacao());
 
+            Diretor diretor = new Diretor();
+            diretor.Nome = "Soraia";
+            diretor.CPF = "568.251.261-20";
+            diretor.Salario = 10000;
+            Console.WriteLine(diretor.Nome);
+            Console.WriteLine(diretor.GetBonificacao());
+
+
+            GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
+            gerenciadorBonificacao.Registrar(funcionario);
+            gerenciadorBonificacao.Registrar(diretor);
+
+            Console.WriteLine(gerenciadorBonificacao.GetTotalBonificacao());
+
             Console.ReadLine();
         }
     }
