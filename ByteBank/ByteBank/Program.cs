@@ -16,22 +16,22 @@ namespace ByteBank
             funcionario.CPF = "229.984.398-10";
             funcionario.Salario = 5000;
 
-            Console.WriteLine(funcionario.Nome);
-            Console.WriteLine(funcionario.GetBonificacao());
+            Console.WriteLine("Funcionário: " + funcionario.Nome);
+            Console.WriteLine("Bonificação Funcionário: " + funcionario.GetBonificacao());
 
             Diretor diretor = new Diretor();
             diretor.Nome = "Soraia";
             diretor.CPF = "568.251.261-20";
             diretor.Salario = 10000;
-            Console.WriteLine(diretor.Nome);
-            Console.WriteLine(diretor.GetBonificacao());
+            Console.WriteLine("Diretor: " + diretor.Nome);
+            Console.WriteLine("Bonificação Diretor: " + diretor.GetBonificacao());
 
 
             GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
             gerenciadorBonificacao.Registrar(funcionario);
             gerenciadorBonificacao.Registrar(diretor);
 
-            Console.WriteLine(gerenciadorBonificacao.GetTotalBonificacao());
+            Console.WriteLine("Total de bonificação: " + gerenciadorBonificacao.GetTotalBonificacao());
 
             Console.ReadLine();
         }
