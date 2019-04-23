@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Funcionarios
 {
-    abstract class Autenticavel : Funcionario
+    interface IAutenticavel
     {
+        bool Autenticar(string senha);
+
+        /*
         public string Senha { get; set; }
 
         public Autenticavel(string cpf, double salario): base(cpf, salario)
@@ -19,5 +22,6 @@ namespace ByteBank.Funcionarios
         {
             return Senha == senha;
         }
+        */
     }
 }
